@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, head, body{
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+        }
+        header, #navbar{
+            height: 5vh;
+            max-height: 65px;
+            min-height: 40px;
+            width: 100%;
+            margin: 0;
+        }
+        #navbar{
+            border: 1px solid red;
+            background-color: white;
+            position: fixed;
+            text-align: center;
+            padding-top: 2.5vh;
+            margin: 0;
+        }
+        #welcome-section{
+            height: 65vh;
+            width: 100vw;
+            text-align: center;
+            padding-top: 35vh;
+        }
+        /* SETS THE ENTIRE PROJECTS AREA TO BE FLEX */
+        @media(min-width: 518px){
+            /* WIDE SET FLEX TO ROW */
+            #projects{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                align-items: center;
+            }
+        }
+        @media(max-width: 517px){
+            /* NARROW SET FLEX TO COLUMN */
+            #projects{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        } 
+        /* LABEL styling for IMAGE and LABEL */
+        .img-label{
+                background-color: silver;
+                border: 2px solid black;
+                display: flex;
+                width:25vw;
+                height:auto;
+                font-size: 1.2rem;
+                flex-direction: column;
+                text-align: center;
+                font-weight: 600;
+                margin: 0px 15px 0px 15px;
+        }
+
+        #contact-info{
+            margin-top: 10vh;
+            max-height: 50vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        #fcc-logo-img{
+            height: 80px;
+            width: 80px;
+        }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <a class="nav-item" href="#projects">Projects</a> |
+            <a class="nav-item" href="#contact-info">Contact</a> 
+        </nav>
+    </header>
+
+    <section id="welcome-section">
+        <h1>Evan Crabb</h1>
+        <p>Self-taught developer</p>
+    </section>
+
+    <section id="projects">
+
+        <!-- Technical Documentation Page -->
+        <div id="projects-grid">
+            <a class="project-tile"
+                href="https://codepen.io/crabbicles/pen/rNpMRwa"
+                target="_blank"
+                class="project-tile"
+                >
+                <label class="img-label">
+                    <img id="technical-doc-img" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg"/>
+                    <p>"Technical Documentation Page"</p>
+                </label>
+            </a>
+        </div>
+        <!-- Survey Form -->
+        <div id="projects-grid">
+            <a class="project-tile"
+                href="https://codepen.io/crabbicles/pen/abEzQyx"
+                target="_blank"
+                class="project-tile"
+                >
+                <label class="img-label">
+                    <img id="mock-survey-img" src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg"/>
+                    <p>"Mock Survey"</p>
+                </label>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact-info">
+        <div id="contact-img">
+            <a id="profile-link" target="_blank" href="https://www.freecodecamp.org/Crabbicles"><img id="fcc-logo-img" src="https://design-style-guide.freecodecamp.org/downloads/fcc_secondary_small.svg" /></a>
+            <a id="profile-link" target="_blank" href="https://github.com/Crabbicles"><img id="fcc-logo-img" src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/github-square-512.png" /></a> 
+        </div>
+    </section>
+<!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+
+
+</html>
